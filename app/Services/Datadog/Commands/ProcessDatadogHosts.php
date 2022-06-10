@@ -16,7 +16,7 @@ class ProcessDatadogHosts extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:process-datadog-hosts';
+    protected $signature = 'wtk:process-datadog-hosts';
 
     /**
      * The console command description.

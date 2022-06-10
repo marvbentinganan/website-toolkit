@@ -11,7 +11,7 @@ class CleanUpStorage extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:sitespeed-cleanup';
+    protected $signature = 'wtk:sitespeed-cleanup';
 
     /**
      * The console command description.

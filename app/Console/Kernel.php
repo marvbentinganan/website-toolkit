@@ -21,81 +21,81 @@ class Kernel extends ConsoleKernel
 
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('wca:postmark-import-stats')
+        $schedule->command('wtk:postmark-import-stats')
         ->dailyAt('0:05')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:postmark-process-stats')
+        $schedule->command('wtk:postmark-process-stats')
         ->dailyAt('0:10')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:process-agent-data')
+        $schedule->command('wtk:process-agent-data')
         ->dailyAt('1:00')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:sitespeed-scan')
+        $schedule->command('wtk:sitespeed-scan')
         ->sundays()
         ->at('2:00')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:sitespeed-process')
+        $schedule->command('wtk:sitespeed-process')
         ->sundays()
         ->at('4:00')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:hetrix-process-import')
+        $schedule->command('wtk:hetrix-process-import')
         ->everyMinute()
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:import-datadog-hosts')
+        $schedule->command('wtk:import-datadog-hosts')
         ->dailyAt('0:15')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:process-datadog-hosts')
+        $schedule->command('wtk:process-datadog-hosts')
         ->dailyAt('0:20')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:import-forge-servers')
+        $schedule->command('wtk:import-forge-servers')
         ->weeklyOn(1, '8:00')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:process-forge-servers')
+        $schedule->command('wtk:process-forge-servers')
         ->weeklyOn(1, '8:05')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:import-forge-sites')
+        $schedule->command('wtk:import-forge-sites')
         ->weeklyOn(1, '8:10')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:process-forge-sites')
+        $schedule->command('wtk:process-forge-sites')
         ->weeklyOn(1, '8:15')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wca:import-datadog-http-logs')
+        $schedule->command('wtk:import-datadog-http-logs')
         ->everyTwoHours()
         ->withoutOverlapping()
         ->runInBackground()

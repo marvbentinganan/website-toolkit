@@ -16,7 +16,7 @@ class ProcessForgeSites extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:process-forge-sites';
+    protected $signature = 'wtk:process-forge-sites';
 
     /**
      * The console command description.

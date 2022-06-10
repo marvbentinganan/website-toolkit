@@ -15,7 +15,7 @@ class UpdateMetricId extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:update-metric-id';
+    protected $signature = 'wtk:update-metric-id';
 
     /**
      * The console command description.

@@ -15,7 +15,7 @@ class ImportForgeSites extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:import-forge-sites';
+    protected $signature = 'wtk:import-forge-sites';
 
     /**
      * The console command description.

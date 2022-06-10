@@ -13,7 +13,7 @@ class AddWebhookProvider extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:add-webhook-provider';
+    protected $signature = 'wtk:add-webhook-provider';
 
     /**
      * The console command description.

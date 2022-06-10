@@ -13,7 +13,7 @@ class SiteSpeedScan extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:sitespeed-scan 
+    protected $signature = 'wtk:sitespeed-scan 
                             {domainID? : Domain ID}';
 
     /**

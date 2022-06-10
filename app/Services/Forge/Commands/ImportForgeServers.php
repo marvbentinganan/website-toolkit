@@ -14,7 +14,7 @@ class ImportForgeServers extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:import-forge-servers';
+    protected $signature = 'wtk:import-forge-servers';
 
     /**
      * The console command description.

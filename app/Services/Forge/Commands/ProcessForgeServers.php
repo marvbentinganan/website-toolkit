@@ -15,7 +15,7 @@ class ProcessForgeServers extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:process-forge-servers';
+    protected $signature = 'wtk:process-forge-servers';
 
     /**
      * The console command description.

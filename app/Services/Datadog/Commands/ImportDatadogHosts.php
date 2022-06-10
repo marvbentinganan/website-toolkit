@@ -14,7 +14,7 @@ class ImportDatadogHosts extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:import-datadog-hosts';
+    protected $signature = 'wtk:import-datadog-hosts';
 
     /**
      * The console command description.

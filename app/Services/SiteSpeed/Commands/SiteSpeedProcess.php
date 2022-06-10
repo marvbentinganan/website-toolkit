@@ -16,7 +16,7 @@ class SiteSpeedProcess extends Command
      *
      * @var string
      */
-    protected $signature = 'wca:sitespeed-process';
+    protected $signature = 'wtk:sitespeed-process';
 
     /**
      * The console command description.

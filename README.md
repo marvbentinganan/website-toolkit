@@ -16,22 +16,24 @@ This is the agent that collects data from various sources. This is composed of t
 
 ## Services
 
-### Snipe IT
+### Forge
 
-This service retrieves the Servers and Domains from SnipeIT.
-
-#### Available Artisan Commands
-
-- `php artisan snipe:import-all-assets` - import assets
-- `php artisan snipe:process-all-assets` - process imported assets
-
-### WordPress Agent
-
-This service receives the collected data by the wp agent and parses it to the appropriate tables.
+This service retrieves the Servers and Domains from Laravel Forge API.
 
 #### Available Artisan Commands
 
-- `php artisan wca:process-agent-data` - process the data from import_agents_data. This is automatically run daily if the scheduler is setup.
+- `php artisan wtk:import-forge-servers` - import servers from Laravel Forge
+- `php artisan wtk:import-forge-sites` - import sites from Laravel Forge
+- `php artisan wtk:process-forge-servers` - process imported servers from Laravel Forge
+- `php artisan wtk:process-forge-sites` - process imported sites from Laravel Forge
+
+### Log Parser
+
+This service receives parsed nginx logs from the [Log Parser Agent](https://github.com/marvbentinganan/log-parser).
+
+#### Available Artisan Commands
+
+- `php artisan wtk:parse-logs` - process the data from import_web_server_logs table.
 
 ### SiteSpeed
 
@@ -39,5 +41,5 @@ This service dispaches a job to scan domains using sitespeed.io. Make sure to se
 
 #### Available Artisan Commands
 
-- `php artisan wca:sitespeed-scan` - dispatches a job to run a sitespeed scan for every domain that has `sitespeed_check` set to true in the domains table. You can also provide an argument of the `domain_id` of the domain you want to scan.
-- `php artisan wca:sitespeed-process` - this will process the data in `import_sitespeed_data` table to store the metrics for each domain.
+- `php artisan wtk:sitespeed-scan` - dispatches a job to run a sitespeed scan for every domain that has `sitespeed_check` set to true in the domains table. You can also provide an argument of the `domain_id` of the domain you want to scan.
+- `php artisan wtk:sitespeed-process` - this will process the data in `import_sitespeed_data` table to store the metrics for each domain.

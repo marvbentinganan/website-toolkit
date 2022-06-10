@@ -16,6 +16,10 @@ class UpdateSitespeedMetricDataTableAddMetricIdColumn extends Migration
         Schema::table('sitespeed_metric_data', function (Blueprint $table) {
             $table->unsignedBigInteger('metric_id')->nullable();
         });
+
+        Schema::table('domains', function (Blueprint $table) {
+            $table->boolean('sitespeed_check')->default(false);
+        });
     }
 
     /**
@@ -27,6 +31,10 @@ class UpdateSitespeedMetricDataTableAddMetricIdColumn extends Migration
     {
         Schema::table('sitespeed_metric_data', function (Blueprint $table) {
             $table->dropColumn('metric_id');
+        });
+
+        Schema::table('domains', function (Blueprint $table) {
+            $table->dropColumn('sitespeed_check');
         });
     }
 }
