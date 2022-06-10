@@ -10,11 +10,10 @@ This is the agent that collects data from various sources. This is composed of t
 
 ## Installation
 
-- Clone project and update the `.env`. Make sure to update the SnipeIT database connection as we need to pull the domains and servers from SnipeIT.
+- Clone project and update the `.env`
 - Install dependencies. `composer install`
 - Run the Migrations. `php artisan migrate`
 - Run the Seeders. `php artisan db:seed`
-- Import and Process data from SnipeIT
 
 ## Services
 
