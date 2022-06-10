@@ -17,7 +17,7 @@ class ProcessServers extends Command
      *
      * @var string
      */
-    protected $signature = 'wtk:postmark-process-servers';
+    protected $signature = 'wtk:process-postmark-servers';
 
     /**
      * The console command description.

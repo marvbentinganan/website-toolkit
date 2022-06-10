@@ -16,7 +16,7 @@ class ProcessStats extends Command
      *
      * @var string
      */
-    protected $signature = 'wtk:postmark-process-stats';
+    protected $signature = 'wtk:process-postmark-stats';
 
     /**
      * The console command description.

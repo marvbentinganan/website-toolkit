@@ -15,7 +15,7 @@ class ImportServers extends Command
      *
      * @var string
      */
-    protected $signature = 'wtk:postmark-import-servers';
+    protected $signature = 'wtk:import-postmark-servers';
 
     /**
      * The console command description.

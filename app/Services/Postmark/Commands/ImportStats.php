@@ -17,7 +17,7 @@ class ImportStats extends Command
      *
      * @var string
      */
-    protected $signature = 'wtk:postmark-import-stats
+    protected $signature = 'wtk:import-postmark-stats
                             {startDate?}
                             {endDate?}';
 

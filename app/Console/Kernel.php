@@ -21,20 +21,14 @@ class Kernel extends ConsoleKernel
 
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('wtk:postmark-import-stats')
+        $schedule->command('wtk:import-postmark-stats')
         ->dailyAt('0:05')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
 
-        $schedule->command('wtk:postmark-process-stats')
+        $schedule->command('wtk:process-postmark-stats')
         ->dailyAt('0:10')
-        ->withoutOverlapping()
-        ->runInBackground()
-        ->onOneServer();
-
-        $schedule->command('wtk:process-agent-data')
-        ->dailyAt('1:00')
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
@@ -49,12 +43,6 @@ class Kernel extends ConsoleKernel
         $schedule->command('wtk:sitespeed-process')
         ->sundays()
         ->at('4:00')
-        ->withoutOverlapping()
-        ->runInBackground()
-        ->onOneServer();
-
-        $schedule->command('wtk:hetrix-process-import')
-        ->everyMinute()
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
@@ -91,12 +79,6 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('wtk:process-forge-sites')
         ->weeklyOn(1, '8:15')
-        ->withoutOverlapping()
-        ->runInBackground()
-        ->onOneServer();
-
-        $schedule->command('wtk:import-datadog-http-logs')
-        ->everyTwoHours()
         ->withoutOverlapping()
         ->runInBackground()
         ->onOneServer();
